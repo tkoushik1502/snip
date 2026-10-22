@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Snip — URL shortener</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Snip</h1>
+      <p class="muted">Shorten links and see who clicks them. <a href="/docs">API docs</a></p>
+    </header>
+
+    <form id="create-form" class="card">
+      <label for="url">Long URL</label>
+      <input id="url" name="url" type="url" placeholder="https://example.com/a/very/long/path" required>
+      <div class="row">
+        <div>
+          <label for="alias">Custom alias <span class="muted">(optional)</span></label>
+          <input id="alias" name="alias" type="text" placeholder="my-link" pattern="[A-Za-z0-9_\-]{3,32}">
+        </div>
+        <div>
+          <label for="expires">Expires in hours <span class="muted">(optional)</span></label>
+          <input id="expires" name="expires" type="number" min="1" max="8760" placeholder="never">
+        </div>
+      </div>
+      <button type="submit">Shorten</button>
+      <p id="form-msg" role="status"></p>
+    </form>
+
+    <section class="card">
+      <h2>Your links</h2>
+      <table>
+        <thead><tr><th>Short</th><th>Destination</th><th class="num">Clicks</th><th></th></tr></thead>
+        <tbody id="links"></tbody>
+      </table>
+      <p id="empty" class="muted" hidden>No links yet. Create one above.</p>
+    </section>
+
+    <section id="stats" class="card" hidden>
+      <h2>Stats for <code id="stats-code"></code></h2>
+      <p class="muted"><span id="stats-total"></span> total clicks · last 30 days</p>
+      <div id="chart" aria-label="Clicks per day"></div>
+      <h3>Top referrers</h3>
+      <ul id="referrers"></ul>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
