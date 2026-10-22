@@ -8,6 +8,9 @@ A URL shortener built with **FastAPI**, **SQLAlchemy** and **PostgreSQL**. It cr
 
 > Hosted on Render's free tier: the first request after a period of inactivity can take ~30–50 seconds while the service wakes up.
 
+![Snip dashboard showing links, a 30-day click chart and top referrers](docs/dashboard.png)
+<sub>Dashboard with sample data.</sub>
+
 ---
 
 ## Features
