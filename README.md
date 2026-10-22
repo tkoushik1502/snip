@@ -1,6 +1,6 @@
 # Snip — URL shortener with click analytics
 
-![CI](https://github.com/YOUR_GITHUB_USERNAME/snip/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/tkoushik1502/snip/actions/workflows/ci.yml/badge.svg)
 
 A URL shortener built with **FastAPI**, **SQLAlchemy** and **PostgreSQL**. It creates short links (random or custom aliases, with optional expiry), redirects them, records every click, and shows per-link analytics on a small dashboard.
 
