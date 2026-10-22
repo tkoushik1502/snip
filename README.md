@@ -4,7 +4,9 @@
 
 A URL shortener built with **FastAPI**, **SQLAlchemy** and **PostgreSQL**. It creates short links (random or custom aliases, with optional expiry), redirects them, records every click, and shows per-link analytics on a small dashboard.
 
-**Live demo:** _add your Render URL here_ · **API docs:** `/docs` (auto-generated OpenAPI)
+**Live demo:** https://snip-vb5p.onrender.com · **API docs:** https://snip-vb5p.onrender.com/docs
+
+> Hosted on Render's free tier: the first request after a period of inactivity can take ~30–50 seconds while the service wakes up.
 
 ---
 
@@ -128,7 +130,6 @@ It allows a short burst (10 links by default) while capping the sustained rate (
 
 1. Push this repo to GitHub.
 2. In Render: **New → Blueprint**, then select the repo. `render.yaml` creates the web service and a Postgres database and wires `DATABASE_URL` automatically.
-3. Put the resulting URL in the "Live demo" line above.
 
 ## Configuration
 
